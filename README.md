@@ -1,93 +1,121 @@
-README.md
-
 # Dashboard de Vendas - Streamlit
 
-Este projeto é um dashboard interativo de vendas desenvolvido em Python, utilizando as bibliotecas Streamlit, Pandas e Plotly. Ele permite a análise de métricas de vendas por estado, mês, dimensão e métrica, com visualização gráfica e opção de download.
+Este projeto é um dashboard interativo de vendas desenvolvido em Python, utilizando as bibliotecas Streamlit, Pandas e Plotly. Ele permite a análise visual de métricas de vendas com base em filtros dinâmicos por estado, mês, dimensão e métrica.
 
-## Funcionalidades
+Aviso: Todos os dados utilizados são mockados (dados fictícios) e foram gerados exclusivamente para fins de demonstração.
 
-- Leitura de dados a partir do arquivo Excel `vendas_brasil_2025.xlsx`
-- Filtros interativos por:
-  - Estado
-  - Mês
-  - Métrica (por exemplo, Receita, Vendas, Lucro)
-  - Dimensão (por exemplo, Categoria, Subcategoria)
-- Gráfico de barras com linha de média (destacada em azul)
-- Download do gráfico gerado em formato PNG
+## Funcionalidades: 
+
+    Leitura de dados a partir do arquivo Excel data/vendas_brasil_2025.xlsx
+
+    Filtros interativos por:
+
+        Estado
+
+        Mês
+
+        Métrica (ex: Receita, Vendas, Lucro)
+
+        Dimensão (ex: Categoria, Subcategoria)
+
+    Gráfico de barras com linha de média destacada
+
+    Download do gráfico gerado em formato PNG
 
 ## Estrutura do Projeto
 
-projeto/ ├── app.py ├── requirements.txt ├── README.md └── data/ └── vendas_brasil_2025.xlsx
-
+projeto/
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── data/
+    └── vendas_brasil_2025.xlsx
 
 ## Requisitos
 
-- Python 3.8 ou superior
-- pip
+    Python 3.8 ou superior
 
-## Instalação
+    pip (gerenciador de pacotes do Python)
 
-1. Clone o repositório:
+## Instalação Local
+
+### Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+    git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+   
+### Acesse o diretório do projeto:
 
-    Instale as dependências:
+    cd dashboard_sales
 
-pip install -r requirements.txt
+  Instale as dependências:
 
-Conteúdo do requirements.txt:
+  ```bash
+    pip install -r requirements.txt
+  ```
 
-streamlit
-pandas
-plotly
-openpyxl
+## Execute o projeto com o Streamlit:
 
-Execução Local
+```Bash
+   streamlit run app.py
+```
+   
+  Acesse o dashboard:
 
-Execute o seguinte comando na raiz do projeto:
+  O navegador será aberto automaticamente em: http://localhost:8501
 
-streamlit run app.py
+  Caso isso não ocorra, abra manualmente este endereço.
 
-O Streamlit abrirá automaticamente o navegador padrão em http://localhost:8501. Caso isso não ocorra, acesse manualmente esse endereço.
-Deploy Online
-1. Streamlit Community Cloud
+## Acesso Online
 
-A aplicação pode ser publicada gratuitamente na nuvem utilizando a plataforma oficial do Streamlit:
+Você pode acessar o dashboard hospedado na Streamlit Cloud neste link:
 
-    Crie uma conta em: https://streamlit.io/cloud
+  https://dashboardsalesgit-gxc8gfwfzeb3zcqfs3kgqn.streamlit.app/
+  
+## Deploy Online com Streamlit Cloud
 
-    Conecte seu repositório GitHub
+Para hospedar sua própria versão gratuitamente:
 
-    Selecione o arquivo app.py como ponto de entrada
+    Acesse: https://streamlit.io/cloud
 
-    Confirme que o arquivo vendas_brasil_2025.xlsx está incluído no repositório, preferencialmente na pasta data/
+     Crie uma conta e conecte seu repositório GitHub
 
-A plataforma instalará automaticamente as dependências listadas em requirements.txt.
-2. Dash Enterprise (caso a aplicação seja reescrita em Dash)
+     Selecione o arquivo app.py como ponto de entrada
 
-Caso deseje migrar para Dash (Plotly), será necessário reestruturar o código em vez de usar Streamlit. O deploy pode ser feito através do Dash Enterprise, com suporte a autenticação, escalabilidade e segurança.
+     Certifique-se de que o arquivo data/vendas_brasil_2025.xlsx está presente no repositório na pasta "data"
 
-Para instalar o Dash:
+As dependências serão instaladas automaticamente a partir de requirements.txt.
+Alternativa: Deploy com Dash
 
-pip install dash
+Caso queira migrar este projeto para o framework Dash (Plotly), será necessário reescrever a aplicação. O deploy poderá ser feito via Dash Enterprise, com suporte para autenticação, escalabilidade e segurança empresarial.
+
+Instalação do Dash:
+
+```Bash
+''pip install dash
+```
 
 Mais informações: https://plotly.com/dash
-Considerações Finais
 
-Este projeto é uma base para dashboards analíticos e pode ser expandido com:
+## Considerações Finais
+
+Este projeto pode ser expandido com:
 
     Upload de arquivos pelo usuário
 
-    Integração com bancos de dados relacionais (ex: PostgreSQL, MySQL)
+    Integração com bancos de dados (PostgreSQL, MySQL, SQLite)
 
-    Autenticação de usuários
+    Autenticação de usuários com Streamlit
 
-    Exportação de relatórios automáticos
+    Exportação automática de relatórios (PDF, Excel)
 
+    Agendamento de envios por e-mail com métricas
 
----
+## Autor
 
-Se quiser, posso gerar os arquivos `requirements.txt` e `README.md` diretamente para você. Deseja que eu salve isso num arquivo?
+Projeto desenvolvido por Rafael Rodrigues com fins de portfólio.
+Os dados utilizados são fictícios e destinados exclusivamente à demonstração técnica.
+
 
