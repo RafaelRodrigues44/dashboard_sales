@@ -154,7 +154,12 @@ class SalesChart:
             y=df[metric],
             text=df['label'],
             textposition='outside',
-            marker_color='orange',
+            marker=dict(
+                color=df[metric],
+                colorscale='Blues',
+                line=dict(color='rgb(8,48,107)', width=1),
+                opacity=0.9
+                ),
             textfont=dict(size=14, color='black'),
             showlegend=False
         ))
