@@ -17,10 +17,6 @@ venv/
 # Arquivos Jupyter
 .ipynb_checkpoints/
 
-# Dados locais
-data/*.xlsx
-!data/vendas_brasil_2025.xlsx  # Mantém este arquivo se necessário
-
 # Arquivos do Streamlit
 .streamlit/config.toml
 .streamlit/secrets.toml
