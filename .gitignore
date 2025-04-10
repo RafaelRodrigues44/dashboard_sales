@@ -1,0 +1,40 @@
+# Arquivos Python compilados
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ambiente virtual
+venv/
+.env/
+.envrc
+.venv/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+
+# Arquivos Jupyter
+.ipynb_checkpoints/
+
+# Dados locais
+data/*.xlsx
+!data/vendas_brasil_2025.xlsx  # Mantém este arquivo se necessário
+
+# Arquivos do Streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Cache do Streamlit
+**/.streamlit/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos gerados
+grafico_vendas.png
+
+# IDEs
+.vscode/
+.idea/
