@@ -13,7 +13,6 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-
 class SalesDataLoader:
     """
     Class responsible for loading the sales dataset.
@@ -157,10 +156,10 @@ class SalesChart:
             marker=dict(
                 color=df[metric],
                 colorscale='Blues',
-                line=dict(color='rgb(8,48,107)', width=1),
+                #line=dict(color='rgb(8,48,107)', width=1),
                 opacity=0.9
                 ),
-            textfont=dict(size=14, color='black'),
+            textfont=dict(size=10, color='black'),
             showlegend=False
         ))
 
@@ -170,7 +169,7 @@ class SalesChart:
             y=[avg] * len(df),
             mode='lines',
             name='Média',
-            line=dict(color='blue', width=4, dash='dot')
+            line=dict(color='red', width=4, dash='dot')
         ))
 
         month_title = month if month != 'TODOS' else 'Todos os Meses'
@@ -178,12 +177,12 @@ class SalesChart:
 
         fig.update_layout(
             title=dict(text=title, x=0.5, xanchor='center', font=dict(size=20, color='black')),
-            xaxis=dict(title=dimension, tickangle=-45, tickfont=dict(size=12, color='black'), automargin=True),
-            yaxis=dict(title=metric, tickfont=dict(size=12, color='black'), showgrid=False),
+            xaxis=dict(title=dimension, tickangle=-45, tickfont=dict(size=10, color='black'), automargin=True),
+            yaxis=dict(title=metric, tickfont=dict(size=10, color='black'), showgrid=False),
             plot_bgcolor='white',
             paper_bgcolor='white',
             font=dict(color='black'),
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(size=12, color='black')),
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(size=10, color='black')),
             margin=dict(l=40, r=40, t=80, b=100),
             height=550
         )
