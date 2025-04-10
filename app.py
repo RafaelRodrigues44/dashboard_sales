@@ -89,23 +89,22 @@ class SalesGrouper:
 
     def _format_value(self, value: float) -> str:
         """
-        Format value based on the metric type.
+         Format value based on the metric type.
 
-        Args:
-            value (float): Numeric value to format.
+         Args:
+        value (float): Numeric value to format.
 
         Returns:
-            str: Formatted value with proper units and bold style.
+           str: Formatted value with proper units and bold style.
         """
-        if self.metric == 'Margem (%)':
-            return f"<b>{value:,.2f}%</b>".replace(".", ",")
-        elif self.metric == 'Quantidade Vendida':
-            return f"<b>{int(round(value))}</b>"
-        elif "R$" in self.metric:
-            return f"<b>R$ {value:,.2f}</b>".replace(".", ",")
-        else:
-            return f"<b>{value:,.2f}</b>".replace(".", ",")
-
+       if self.metric == 'Margem (%)':
+           return f"<b>{value:,.2f}%</b>".replace(",", "X").replace(".", ",").replace("X", ".")
+       elif self.metric == 'Quantidade Vendida':
+           return f"<b>{int(round(value))}</b>"
+       elif "R$" in self.metric:
+           return f"<b>R$ {value:,.2f}</b>".replace(",", "X").replace(".", ",").replace("X", ".")
+       else:
+           return f"<b>{value:,.2f}</b>".replace(",", "X").replace(".", ",").replace("X", ".")
 
     def group_and_format(self, df: pd.DataFrame) -> pd.DataFrame:
         """
