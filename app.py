@@ -242,11 +242,11 @@ class DashboardApp:
 
         # Export chart as PNG
         buffer = io.BytesIO()
-        chart.write_image(buffer, format='png')
+        chart.write_image(buffer, format='png',  engine='kaleido')
         buffer.seek(0)
 
         st.download_button(
-            label="📥 Baixar gráfico em PNG",
+            label="Baixar gráfico em PNG",
             data=buffer,
             file_name="grafico_vendas.png",
             mime="image/png"
